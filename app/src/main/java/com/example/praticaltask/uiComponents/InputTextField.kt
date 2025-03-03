@@ -1,19 +1,13 @@
 package com.example.praticaltask.uiComponents
 
-/**
- * Created by Bharat Lalwani on 22/07/22.
- */
-
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.runtime.* // ktlint-disable no-wildcard-imports
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -23,11 +17,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.praticaltask.ui.theme.Typography
 
 /**
  * Created by Bharat Lalwani on 11/07/22.
  */
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InputTextField(
     modifier: Modifier = Modifier,
@@ -37,7 +33,7 @@ fun InputTextField(
     leadingIcon: @Composable (() -> Unit)? = null,
     trailingIcon: @Composable (() -> Unit)? = null,
     onChange: (String) -> Unit = {},
-    textStyle: TextStyle = Typography.h3,
+    textStyle: TextStyle = Typography.bodyMedium,
     imeAction: ImeAction = ImeAction.Next,
     keyboardType: KeyboardType = KeyboardType.Text,
     keyBoardActions: KeyboardActions = KeyboardActions(),

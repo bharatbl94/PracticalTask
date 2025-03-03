@@ -16,12 +16,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.praticaltask.R
 
 /**
  * Created by Bharat Lalwani on 12/07/22.
  */
 @Composable
-fun SpinnerSelection(name: String, list: List<String>, selectedString: String = "", textLabel: String = "") {
+fun SpinnerSelection(
+    name: String,
+    list: List<String>,
+    selectedString: String = "",
+    textLabel: String = ""
+) {
     var text by remember { mutableStateOf(selectedString) } // initial value
     var isOpen by remember { mutableStateOf(false) } // initial value
     val openCloseOfDropDownList: (Boolean) -> Unit = {
